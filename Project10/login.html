@@ -1,0 +1,72 @@
+<!-- メッセージ -->
+<!-- ログイン画面 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/character.css">
+    <link rel="icon" href="img/project8.png"> <!-- ファビコンの設定 -->
+    <title>ログイン</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">LOGIN</nav>
+    </header>
+
+    <!-- メッセージを表示する場所 -->
+    <div id="error"></div>
+    <div id="login"></div>
+    <div id="message"></div>
+    
+        <script>
+            if (location.search.includes('message=registered')) {
+           // location.searchはクエリパラメーターを取得するためのプロパティです（下記参照）。
+                document.getElementById('message').textContent = '新規登録が完了しました。ログインしてください。';
+            }
+            if (location.search.includes('error=exists')) {
+                document.getElementById('error').textContent = 'すでに登録されているユーザーIDです。ログインしてください。';
+            }
+            if (location.search.includes('login=failed')) {
+                document.getElementById('login').textContent = 'ログイン失敗しました。再度ログインしてください。';
+            }
+
+        </script>
+
+        <!-- ログインフォーム -->
+        <form name="form1" action="login_process.php" method="post">
+            <label for="lid">ID:</label>
+            <input type="text" id="lid" name="lid" required>
+            
+            <label for="lpw">PW:</label>
+            <input type="password" id="lpw" name="lpw" required>
+            
+            <input type="submit" value="LOGIN">
+        </form>
+    <br />
+    <a href="new_register.html">新規登録はこちら</a> <!-- 新規登録画面へのリンク -->
+</body>
+
+</html>
+
+<!-- クエリパラメーター -->
+<!-- クエリパラメーターとは、URLの末尾に「?」を付け、その後に「キー=値」の形でデータを渡す方法です。 -->
+<!-- 例えば、以下のようなURLがあるとします。 -->
+<!-- http://example.com/index.html?name=John&age=20 -->
+<!-- この場合、nameとageというキーに対して、それぞれJohnと20という値が渡されています。 -->
+<!-- ? 　？以降がクエリパラメータです-->
+<!-- ＆　複数のパラメーターは＆で繋ぎます -->
+
+<!-- クエリパラメーターは、JavaScriptでURLを解析する際によく使われます。 -->
+<!-- 例えば、以下のようなコードを書くことで、クエリパラメーターを取得することができます。 -->
+<!-- if (location.search.includes('name=John')) { -->
+<!--     console.log('Hello, John!'); -->
+<!-- } -->
+<!-- このコードは、URLに「name=John」というクエリパラメーターが含まれている場合に、コンソールに「Hello, John!」というメッセージを出力します。 -->
+
+<!-- 今回の場合、login.htmlにアクセスする際に、クエリパラメーターとして「error=exists」という値を渡しています。 -->
+<!-- そして、JavaScriptでURLを解析し、クエリパラメーターが「error=exists」の場合に、エラーメッセージを表示するようにしています。 -->
+<!-- このように、クエリパラメーターを使うことで、URLにデータを渡すことができ、JavaScriptでそのデータを取得して処理することができます。 -->

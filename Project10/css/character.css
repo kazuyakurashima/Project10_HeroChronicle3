@@ -1,0 +1,185 @@
+/* ログイン・新規登録ページ用のスタイル */
+body {
+    font-family: Lato, 'Hiragino Kaku Gothic Pro', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #89949e;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-family: Pacifico, sans-serif;
+    font-size: 36px;
+    color: #4ac0b9;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #4ac0b9;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* ヘッダー */
+  header nav {
+    background-color: #42c7c1;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* フォーム全体のレイアウト */
+  form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ラベルのスタイル */
+  form label {
+    font-size: 14px;
+    color: #322f33;
+    margin: 10px 0 5px;
+    display: block;
+  }
+  
+  /* フォーム内の入力フィールドと選択ボックスの統一スタイル */
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="password"],
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dae1e7;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000000; /* 文字色を黒に設定 */
+    box-sizing: border-box;
+  }
+  
+  /* 入力フィールドのフォーカス時のスタイル */
+  form input[type="text"]:focus,
+  form input[type="number"]:focus,
+  form input[type="password"]:focus,
+  form select:focus {
+    color: #000000; /* フォーカス時も文字色を黒に維持 */
+    border-color: #42c7c1; /* 枠線色を強調 */
+  }
+  
+  /* ボタンのスタイル */
+  form button,
+  form input[type="submit"] {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: #42c7c1;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* ボタンのホバー時のスタイル */
+  form button:hover,
+  form input[type="submit"]:hover {
+    background-color: #3ab1aa;
+  }
+  
+  /* エラーメッセージ */
+  #error,
+  #login,
+  #message {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    color: #ff5e57;
+    font-size: 14px;
+  }
+  
+  /* リンク */
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4ac0b9;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* キャラクター登録画面用のスタイル */
+  
+  /* 登録完了メッセージ */
+  .message {
+    text-align: center;
+    font-size: 16px;
+    color: #4ac0b9;
+    margin-bottom: 20px;
+  }
+  
+  /* テーブル全体のスタイル */
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #322f33;
+    border: 1px solid #dae1e7;
+  }
+  
+  table th {
+    background-color: #42c7c1;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  table tr:hover {
+    background-color: #e8f7f7;
+  }
+  
+  /* 編集・削除ボタンのスタイル */
+  .edit-btn, .delete-btn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-image: url('path/to/edit-icon.png'); /* 編集アイコン */
+  }
+  
+  .delete-btn {
+    background-image: url('path/to/delete-icon.png'); /* 削除アイコン */
+  }
+  
